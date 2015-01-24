@@ -1,0 +1,7 @@
+= Makey Makey Jukebox
+
+The goal is to have a command-line python music manager that can seek or
+shuffle a given playlist by reacting to keyboard events sent by the
+http://makeymakey.com/[makey makey].
+
+It is not there yet.

@@ -5,3 +5,17 @@ shuffle a given playlist by reacting to keyboard events sent by the
 http://makeymakey.com/[makey makey].
 
 It is not there yet.
+
+== Requires
+
+* dbus-python >= 1.0 (required by pympris)
++
+----
+apt-get install python3-dbus
+----
++
+* pympris
++
+----
+pip install pympris
+----

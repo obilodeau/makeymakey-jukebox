@@ -14,8 +14,13 @@ It is not there yet.
 apt-get install python3-dbus
 ----
 +
-* pympris
+* getch and pympris
 +
 ----
-pip install pympris
+pip install pympris getch
 ----
+
+== Usage
+
+Plug your makeymakey on the 'w' key. If 'w' isn't right for you change the
+code. Its pretty straightforward.

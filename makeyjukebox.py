@@ -4,7 +4,11 @@ import time
 
 import dbus
 from dbus.mainloop.glib import DBusGMainLoop
+from getch import getch
 import pympris
+
+# TODO: Implement seeking, skip, Pause/Play toggle
+#       http://pympris.readthedocs.org/en/latest/
 
 class Jukebox(object):
 
@@ -12,6 +16,7 @@ class Jukebox(object):
 
         # internal constants
         self.jitter = 1
+        self.makey_key = 'w'
 
         # MPRIS dependencies
         self.dbus_loop = DBusGMainLoop()
@@ -28,7 +33,13 @@ class Jukebox(object):
     def Run(self):
         self._play()
         while True:
-            time.sleep(self.jitter)
+
+            # grab key events (blocking)
+            key = getch()
+            if key == self.makey_key:
+                # TODO: change for skip
+                self._play()
+
 
 if __name__ == "__main__":
 
